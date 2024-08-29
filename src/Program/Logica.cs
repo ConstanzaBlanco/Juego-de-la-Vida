@@ -22,8 +22,7 @@ public class Logica
                 {
                     for (int j = y - 1; j <= y + 1; j++)
                     {
-                        if (i >= 0 && i < tablero.boardWidth && j >= 0 && j < tablero.boardHeight &&
-                            gameBoard[i, j])
+                        if (i >= 0 && i < tablero.boardWidth && j >= 0 && j < tablero.boardHeight && gameBoard[i, j])
                         {
                             aliveNeighbors++;
                         }

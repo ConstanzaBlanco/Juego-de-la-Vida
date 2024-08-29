@@ -10,13 +10,9 @@ namespace Ucu.Poo.GameOfLife
             Tablero tablero = new Tablero();
             tablero.Crear_Tablero(lector);
             Logica logica = new Logica(tablero);
-            Imprimir imprimir = new Imprimir(tablero.Obtener_gameBoard(), tablero.boardWidth, tablero.boardHeight,logica);
+            Imprimir imprimir = new Imprimir(tablero,logica);
 
-            while (true)
-            {
                 imprimir.ImprimirTablero();
-                
-            }
         }
     }
 }

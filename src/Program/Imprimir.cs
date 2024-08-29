@@ -1,22 +1,16 @@
 namespace Ucu.Poo.GameOfLife;
-using System.Numerics;
-using System.IO;
 using System; //Importa Console,String y Math
 using System.Text;//Importa StringBuilder
 using System.Threading;//Importa Thread y Thread.Sleep
 public class Imprimir
 {
-    private bool[,] b; //variable que representa el tablero
-    private int width; //variabe que representa el ancho del tablero
-    private int height; //variabe que representa altura del tablero
+    private Tablero tablero;
     private Logica logica;//Instancia de la clase Logica
 
-    public Imprimir(bool [,] tablero,int ancho,int alto,Logica logicainstancia)
+    public Imprimir(Tablero tablero,Logica logica)
     {
-        b = tablero;
-        width = ancho;
-        height = alto;
-        logica = logicainstancia;
+        this.tablero = tablero;
+        this.logica = logica;
     }
 
     public void ImprimirTablero()
@@ -25,9 +19,10 @@ public class Imprimir
         {
             Console.Clear();
             StringBuilder s = new StringBuilder();
-            for (int y = 0; y < height; y++)
+            bool[,] b = tablero.Obtener_gameBoard(); //b obtiene el nuevo estado del tablero
+            for (int y = 0; y < tablero.boardHeight; y++)
             {
-                for (int x = 0; x < width; x++)
+                for (int x = 0; x < tablero.boardWidth; x++)
                 {
                     if (b[x, y])
                     {
@@ -47,7 +42,7 @@ public class Imprimir
             //Invocar método para calcular siguiente generación
             //=================================================
             logica.Jugar();
-            Thread.Sleep(5000);
+            Thread.Sleep(300);
         }
     }
 }
