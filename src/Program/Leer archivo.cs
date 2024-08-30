@@ -2,6 +2,12 @@
 namespace Ucu.Poo.GameOfLife;
 using System.IO;
 public class Lector_Archivo
+//Responsabilidades:
+//-Tiene que leer el archivo dado en "board.txt" 
+//-Tiene que crear un tablero que marque True o False en función del archivo leído
+//Expert: Esta clase por expert tiene la información correcta para crear un "esquema" de tablero inicial que contenga
+//la ubicación de en donde se encontrarán células y en donde no 
+//Collab: No tiene
 {
     public bool [,] ReadArchive()
     {

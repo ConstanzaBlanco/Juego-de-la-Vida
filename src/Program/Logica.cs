@@ -1,4 +1,12 @@
 namespace Ucu.Poo.GameOfLife;
+//Responsabilidades:
+//-Leer el tablero dado por "Tablero"
+//-Crear una copia de dicho tablero
+//-Crear las reglas de juego sobre el comportamiento de las células
+//-Restablecer al tablero inicial una vez terminan de actuar las celulas
+//Collabs: Tablero, Logica
+//Expert: Esta clase tiene la información adecuada para determinar cómo van a actuar las células dentro del tablero dado,
+//así como resetearlo cuando haga falta
 
 public class Logica
 {

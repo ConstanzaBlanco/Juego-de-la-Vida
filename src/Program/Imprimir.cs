@@ -2,6 +2,12 @@ namespace Ucu.Poo.GameOfLife;
 using System; //Importa Console,String y Math
 using System.Text;//Importa StringBuilder
 using System.Threading;//Importa Thread y Thread.Sleep
+//Responsabilidades:
+//-Leer el tablero dado por "Tablero" 
+//-Imprimir dicho tablero dado
+//Esta clase tiene el expert de mostrar el pantalla el tablero impreso, 
+//ya que cuenta con la información para cumplir con dicha responsabilidad
+//Collabs:Tablero,Logica
 public class Imprimir
 {
     private Tablero tablero;

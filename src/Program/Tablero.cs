@@ -1,6 +1,11 @@
 using System.Numerics;
 
 namespace Ucu.Poo.GameOfLife;
+//Responsabilidades: 
+//-Leer la información brindada por "Lector_archivo"
+//-Crear un tablero en base a dicha información
+//Collabs: Lector archivo
+//Expert: Esta clase tiene la información correcta para crear el tablero que se va a utilizar más adelante
 
 public class Tablero
 {
